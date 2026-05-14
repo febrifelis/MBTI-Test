@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBTI Test 16 Personalities</title>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<div id="app">
+  <div id="screen-intro" class="intro">
+    <p style="font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:.5rem">Tes Kepribadian</p>
+    <h1>Kenali <em>Dirimu</em><br>Lewat MBTI</h1>
+    <p>Jawab 60 pertanyaan jujur untuk menemukan tipe kepribadianmu dari 16 kemungkinan.</p>
+    <div class="badge-row">
+      <span class="badge a">Energi (E/I)</span>
+      <span class="badge b">Informasi (S/N)</span>
+      <span class="badge c">Keputusan (T/F)</span>
+      <span class="badge d">Gaya Hidup (J/P)</span>
+    </div>
+    <p style="font-size:.8rem;color:var(--ink2)">~8 menit &nbsp;·&nbsp; 60 pertanyaan &nbsp;·&nbsp; Gratis</p>
+    <button class="btn-start" onclick="startTest()">Mulai Tes →</button>
+  </div>
+
+  <div id="screen-test" class="hidden">
+    <div class="prog-wrap">
+      <div class="prog-top"><span id="prog-label">Pertanyaan 1 dari 60</span><span id="prog-pct">0%</span></div>
+      <div class="prog-bar"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
+    </div>
+    <div class="dim-label" id="dim-label">Dimensi: Energi (E vs I)</div>
+    <div class="q-card">
+      <div class="q-text" id="q-text"></div>
+      <div class="scale-labels"><span id="lbl-left"></span><span id="lbl-right"></span></div>
+      <div class="scale-row" id="scale-row"></div>
+    </div>
+    <div class="nav-row">
+      <button class="btn-nav btn-back" id="btn-back" onclick="goBack()">← Kembali</button>
+      <button class="btn-nav btn-next" id="btn-next" onclick="goNext()" disabled>Lanjut →</button>
+    </div>
+  </div>
+
+  <div id="screen-result" class="hidden">
+    <div class="result-wrap" id="result-content"></div>
+  </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
